@@ -4,7 +4,7 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 //const { engine } = require ('express-handlebars');
 //const handlebars = require('express-handlebars');
-const port = 3000;
+const port = 5000;
 var morgan = require('morgan');
 const app = express();
 const fs = require('fs');
@@ -22,8 +22,9 @@ app.engine('hbs',handlebars.engine({
 app.set('view engine','hbs');
 app.set('views', path.join(__dirname, 'resources/views'))
 
-app.get('/', (req, res) => {
+app.get('/khoahoc', (req, res) => {
     
+
 
     res.render('home')
     
